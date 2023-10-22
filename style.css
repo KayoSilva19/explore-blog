@@ -252,7 +252,7 @@ footer {
   
 #app .section-content-explore {
   grid-template-columns: repeat(3, 1fr);
-  place-items: center;
+  /* place-items: center; */
   height: 576px;
 
   column-gap: 6.0rem;

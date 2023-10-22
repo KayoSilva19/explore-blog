@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color-white: #FFF;
+  --color-gray-100: #F9F4FB;
+  --color-black-purple: #312D64;
+  --color-pink: #B52184;
+  --color-purple-gradient: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body, input, select, textarea, button {
+  font-family: 'Mulish', sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content 1fr ;
+  height: 100vh;
+}
+
+header {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 9.3rem;
+}
+
+header .image-header img{
+  width: 36.4rem;
+  height: 37rem;
+}
+
+.text-header {
+  justify-content: center;
+  margin-top: 1.7rem
+}
+
+.text-header h1 {
+  color: var(--color-pink);
+  
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.text-header img {
+  width: 5.8rem;
+  height: 10.5rem;
+  
+  margin-top: 3.5rem;
+  cursor: pointer;
+
+  color: var(--color-pink);
+}
+
+.text-header p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-black-purple);
+}
+
+main {
+  background-color: var(--color-black-purple);
+}
+
+#app .section-content-explore {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+
+  row-gap: 4.8rem;
+  padding: 5.2rem 3.9rem;
+}
+
+.card-section-explore {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-white);
+  box-shadow: 0px 3.31077px 13.24308px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 2.0rem;
+
+  width: 35.2rem;
+  height: 35.7rem;
+
+  padding: 2.6rem;
+}
+
+.image-card {
+  width: 8.0rem;
+  height: 8.0rem;
+}
+
+.details h2 {
+  color: var(--color-pink);
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+
+.details p {
+  color: var(--color-black-purple);
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  margin-top: 1.9rem;
+}
+
+.section-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 7.8rem 0;
+}
+
+.section-form-container fieldset {
+  width: 35.2rem;
+  border: none;
+}
+
+.section-form-container legend{
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-top: 3rem;
+  color: var(--color-pink);
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2.4rem;
+  margin-top: 4.3rem;
+}
+
+.input-wrapper input, textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+  border-radius: 1.6rem;
+
+  border: 1.5px solid var(--color-black-purple);
+}
+
+.input-wrapper input::placeholder, textarea::placeholder {
+  color: var(--color-black-purple);  
+  opacity: 0.70;
+
+  font-size: 1.6rem;
+
+  font-weight: 600;
+  line-height: 140%; 
+}
+
+.input-wrapper textarea {
+  height: 9.8rem;
+}
+
+.event-submit-form {
+  color: var(--color-white);
+  text-align: center;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem; 
+  text-transform: capitalize;
+
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  background: var(--color-purple-gradient);
+
+  border: none;
+
+  margin-top: 2.4rem;
+}
+
+
+footer {
+  padding: 1.6rem;
+  background: var(--color-purple-gradient);
+
+  color: var(--color-white);
+
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+@media (min-width: 1440px) {
+  header {
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    padding: 31.2rem 0 0 10.9rem;
+    height: 100vh;
+    width: 144.0rem;
+  }
+
+  .text-header h1 {
+    font-size: 5.8287rem;
+  }
+  .text-header p {
+    font-size: 3.2rem;
+  }
+  .text-header img {
+    margin-top: 15.9rem;
+  }
+
+  header > .image-header > img {
+    top: 0;
+    right: 0;
+    position:absolute;
+    width: 75rem;
+    height: 78rem;
+    
+    margin-right: 3.5rem;
+  }
+
+.text-header {
+  text-align: start;
+}
+  
+#app .section-content-explore {
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  height: 576px;
+
+  column-gap: 6.0rem;
+
+  padding: 6.4rem 10.9rem;
+}
+
+.card-section-explore {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2.4rem;
+
+  width: 36.6rem;
+  height: 44.8rem;
+
+  padding: 2.6rem;
+}
+
+.image-card {
+  width: 9.3rem;
+  height: 9.3rem;
+}
+
+.details h2 {
+  font-size: 3.53rem;
+}
+
+.details p {
+  font-size: 1.93rem;
+  margin-top: 2.4rem;
+}
+
+.section-form-container {
+  align-items: start;
+  padding-left: 10.9rem;
+
+  background-image: url('./assets/effect-star.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.input-wrapper  {
+  width: 59.5rem;
+}
+
+}

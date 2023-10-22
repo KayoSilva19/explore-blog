@@ -70,6 +70,18 @@ header .image-header img{
   color: var(--color-black-purple);
 }
 
+.text-link {
+  cursor: pointer;
+}
+
+.text-link img {
+  transition: .2s;
+}
+
+.text-link img:hover {
+  transform: scale(1.1);
+}
+
 main {
   background-color: var(--color-black-purple);
 }
@@ -184,8 +196,14 @@ main {
   border: none;
 
   margin-top: 2.4rem;
+  cursor: pointer;
+
+  transition: all .3s linear;
 }
 
+.event-submit-form:hover {
+  transform: scale(1.1);
+}
 
 footer {
   padding: 1.6rem;
@@ -280,4 +298,59 @@ footer {
   width: 59.5rem;
 }
 
+}
+
+
+header {
+  --startY: -100%;
+  animation: move 1s  linear;
+}
+
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.card-section-explore {
+  --delay: 1s;
+  animation: appear .4s var(--delay) backwards;
+}
+.card-section-explore .image-card:hover {
+  animation: rote .7s infinite linear;
+  cursor: pointer;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rote {
+  100% {
+    transform: rotate(360deg);
+  }
 }
